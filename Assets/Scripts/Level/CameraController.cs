@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float cameraHeight;
     private Camera _camera;
     private Transform _target;
-    private void Start()
+    private void Awake()
     {
         _camera = Camera.main;
         LevelManager.Default.OnLevelStarted += SetTarget;

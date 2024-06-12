@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CollectibleItemType: 0
-  m_SelectionEffect: {fileID: 0}
+  value: 3
 --- !u!65 &3393665304208921500
 BoxCollider:
   m_ObjectHideFlags: 0

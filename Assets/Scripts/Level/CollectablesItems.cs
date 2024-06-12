@@ -11,8 +11,7 @@ public class CollectablesItems : MonoBehaviour
     }
 
     [SerializeField] private CollectibleItemType m_CollectibleItemType;
-    [SerializeField] private GameObject m_SelectionEffect;
-
+    [SerializeField] private float value;
     private void OnTriggerEnter(Collider collision)
     {
         Player player = collision.transform.parent.GetComponent<Player>();
@@ -20,16 +19,15 @@ public class CollectablesItems : MonoBehaviour
         {
             if (m_CollectibleItemType == CollectibleItemType.Money)
             {
-
+                player.PickUpMoney(value);
             }
                 
             else if (m_CollectibleItemType == CollectibleItemType.Alcohol)
             {
-
+                player.PickUpAlcohol(value);
             }
                 
 
-            //Instantiate(m_SelectionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
 
         }

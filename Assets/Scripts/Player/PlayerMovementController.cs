@@ -28,7 +28,7 @@ public class PlayerMovementController : MonoBehaviour
     }
     public void Rotation(float angle)
     {
-        this.angle = angle;
+        this.angle += angle;
     }
     
     public void Move()

@@ -18,6 +18,6 @@ public class PathPoint : MonoBehaviour
         {
             player.Rotation(angle);
         }
-        
+
     }
 }

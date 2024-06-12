@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
     public event UnityAction Started;
 
     [SerializeField] private GameObject finishPanel;
+    [SerializeField] private GameObject preparationPanel;
 
     private GameState _gameState = GameState.Preparation;
 
@@ -38,6 +39,7 @@ public class GameController : MonoBehaviour
         if (_gameState != GameState.Preparation) return;
         _gameState = GameState.Game;
         Started?.Invoke();
+        preparationPanel.SetActive(false);
     }
 
     public void Finish()
@@ -53,5 +55,6 @@ public class GameController : MonoBehaviour
         if (_gameState != GameState.Finish) return;
         _gameState = GameState.Preparation;
         finishPanel.SetActive(false);
+        preparationPanel.SetActive(true);
     }
 }
